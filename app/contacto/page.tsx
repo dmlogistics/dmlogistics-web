@@ -153,7 +153,7 @@ export default function ContactoPage() {
               <h2 style={{ fontSize: '1.375rem', fontWeight: 800, color: '#1B2D6E', marginBottom: '1.75rem' }}>Otras formas de contacto</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', marginBottom: '2.5rem' }}>
                 {[
-                  { icon: <Phone size={20} />, label: 'Teléfono', value: '+34 600 000 000', href: 'tel:+34600000000', color: '#1B2D6E' },
+                  { icon: <Phone size={20} />, label: 'Teléfono', value: '+34 682 051 216', href: 'tel:+34682051216', color: '#1B2D6E' },
                   { icon: <Mail size={20} />, label: 'Email', value: 'info@dmlogistics.es', href: 'mailto:info@dmlogistics.es', color: '#1B2D6E' },
                   { icon: <MapPin size={20} />, label: 'Ubicación', value: 'Madrid, España', href: '#', color: '#1B2D6E' },
                   { icon: <Clock size={20} />, label: 'Horario de oficina', value: 'Lun–Vie 8:00–19:00', href: '#', color: '#1B2D6E' },
@@ -174,7 +174,7 @@ export default function ContactoPage() {
               </div>
 
               {/* WhatsApp CTA */}
-              <a href="https://wa.me/34600000000?text=Hola,%20me%20gustaría%20solicitar%20información%20sobre%20vuestros%20servicios." target="_blank" rel="noopener noreferrer"
+              <a href="https://wa.me/34682051216?text=Hola,%20me%20gustaría%20solicitar%20información%20sobre%20vuestros%20servicios." target="_blank" rel="noopener noreferrer"
                 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', backgroundColor: '#25D366', color: 'white', padding: '1rem 1.5rem', borderRadius: '0.875rem', textDecoration: 'none', fontWeight: 700, fontSize: '0.95rem', transition: 'transform 0.2s' }}
                 onMouseEnter={e => (e.currentTarget.style.transform = 'translateY(-2px)')}
                 onMouseLeave={e => (e.currentTarget.style.transform = 'translateY(0)')}
