@@ -40,7 +40,7 @@ const S = {
 
 export default function ContactoPage() {
   const [sent, setSent] = useState(false)
-  const [form, setForm] = useState({ nombre: '', empresa: '', email: '', telefono: '', servicio: '', mensaje: '' })
+  const [form, setForm] = useState({ nombre: '', empresa: '', email: '', telefono: '', servicio: '', mensaje: '', acepto: false })
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -133,6 +133,12 @@ export default function ContactoPage() {
                       onFocus={e => (e.target.style.borderColor = '#1B2D6E')}
                       onBlur={e => (e.target.style.borderColor = '#e2e8f0')}
                     />
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', marginBottom: '1.25rem' }}>
+                    <input required type="checkbox" id="acepto" checked={form.acepto} onChange={e => setForm({ ...form, acepto: e.target.checked })} style={{ marginTop: '0.2rem', cursor: 'pointer', flexShrink: 0 }} />
+                    <label htmlFor="acepto" style={{ fontSize: '0.8rem', color: '#64748b', lineHeight: 1.6 }}>
+                      He leído y acepto la <a href="/politica-privacidad" target="_blank" style={{ color: '#1B2D6E', fontWeight: 600 }}>Política de Privacidad</a> y el tratamiento de mis datos para gestionar mi solicitud. *
+                    </label>
                   </div>
                   <button type="submit" style={{ width: '100%', backgroundColor: '#F0A87C', color: 'white', padding: '0.875rem', borderRadius: '0.5rem', border: 'none', fontWeight: 700, fontSize: '1rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', fontFamily: 'inherit', transition: 'background 0.2s' }}
                     onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#e08a55')}
