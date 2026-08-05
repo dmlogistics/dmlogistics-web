@@ -63,9 +63,9 @@ export default function Footer() {
           <div>
             <h4 style={{ color: 'white', fontWeight: 700, marginBottom: '1.25rem', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Contacto</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-              <a href="tel:+34600000000" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'rgba(255,255,255,0.65)', textDecoration: 'none', fontSize: '0.875rem' }}>
+              <a href="tel:+34682051216" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'rgba(255,255,255,0.65)', textDecoration: 'none', fontSize: '0.875rem' }}>
                 <Phone size={14} style={{ color: '#F0A87C', flexShrink: 0 }} />
-                +34 600 000 000
+                +34 682 051 216
               </a>
               <a href="mailto:info@dmlogistics.es" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'rgba(255,255,255,0.65)', textDecoration: 'none', fontSize: '0.875rem' }}>
                 <Mail size={14} style={{ color: '#F0A87C', flexShrink: 0 }} />
