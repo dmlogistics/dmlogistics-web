@@ -230,7 +230,7 @@ export default function Home() {
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
             <Link href="/contacto" className="btn-orange">Solicitar presupuesto gratuito</Link>
-            <a href="tel:+34600000000" className="btn-outline-white">Llamar ahora</a>
+            <a href="tel:+34682051216" className="btn-outline-white">Llamar ahora</a>
           </div>
         </div>
       </section>
