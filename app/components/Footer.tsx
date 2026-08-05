@@ -82,9 +82,9 @@ export default function Footer() {
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1.5rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '0.75rem' }}>
           <p style={{ fontSize: '0.8rem' }}>© {new Date().getFullYear()} DML Logistic. Todos los derechos reservados.</p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <Link href="#" style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Política de Privacidad</Link>
-            <Link href="#" style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Aviso Legal</Link>
-            <Link href="#" style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Cookies</Link>
+            <Link href="/politica-privacidad" style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Política de Privacidad</Link>
+            <Link href="/aviso-legal" style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Aviso Legal</Link>
+            <Link href="/politica-cookies" style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Cookies</Link>
           </div>
         </div>
       </div>
