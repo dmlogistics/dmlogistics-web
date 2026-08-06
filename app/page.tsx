@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Thermometer, Package, Truck, Clock, Shield, Star, MapPin, ArrowRight, CheckCircle, ChevronRight, Warehouse } from 'lucide-react'
+import { Thermometer, Package, Truck, Clock, Shield, MapPin, ArrowRight, CheckCircle, ChevronRight, Warehouse } from 'lucide-react'
 
 const S = {
   container: { maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' },
@@ -185,34 +185,6 @@ export default function Home() {
             <Link href="/zonas" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#1B2D6E', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', borderBottom: '2px solid #F0A87C', paddingBottom: '2px' }}>
               Ver cobertura completa <ArrowRight size={16} />
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section style={{ padding: '6rem 0', backgroundColor: 'white' }}>
-        <div style={S.container}>
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <div style={S.tag}>Opiniones reales</div>
-            <h2 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 800, color: '#1B2D6E', letterSpacing: '-0.02em' }}>Lo que dicen nuestros clientes</h2>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
-            {[
-              { name: 'Carlos M.', role: 'Propietario, Obrador El Trigo', text: 'Llevamos más de un año trabajando con DML y jamás hemos tenido un problema. Puntuales, cuidadosos con el producto y siempre disponibles. Totalmente recomendables.' },
-              { name: 'Laura P.', role: 'Directora, Tienda Gourmet Sabores', text: 'Necesitábamos un transportista que entendiese la delicadeza de nuestros productos. DML lo entendió desde el primer día. El trato es muy personal y el servicio, impecable.' },
-              { name: 'Javier R.', role: 'Jefe de compras, Restaurante La Fragua', text: 'Lo que más valoramos es la flexibilidad horaria. Nos adaptamos a sus ventanas de entrega y ellos a las nuestras. Una relación cómoda y sin complicaciones.' },
-            ].map((t, i) => (
-              <div key={i} style={{ backgroundColor: '#f8f9fc', borderRadius: '1rem', padding: '2rem', border: '1px solid rgba(0,0,0,0.05)' }}>
-                <div style={{ display: 'flex', gap: '2px', marginBottom: '1rem' }}>
-                  {[...Array(5)].map((_, j) => <Star key={j} size={14} style={{ color: '#F0A87C', fill: '#F0A87C' }} />)}
-                </div>
-                <p style={{ color: '#334155', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '1.25rem', fontStyle: 'italic' }}>&ldquo;{t.text}&rdquo;</p>
-                <div>
-                  <div style={{ fontWeight: 700, color: '#1B2D6E', fontSize: '0.875rem' }}>{t.name}</div>
-                  <div style={{ color: '#94a3b8', fontSize: '0.8rem' }}>{t.role}</div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
