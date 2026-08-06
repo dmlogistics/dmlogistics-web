@@ -40,11 +40,41 @@ const S = {
 
 export default function ContactoPage() {
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState('')
   const [form, setForm] = useState({ nombre: '', empresa: '', email: '', telefono: '', servicio: '', mensaje: '', acepto: false })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSent(true)
+    setSending(true)
+    setError('')
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/info@dmlogistics.es', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          _subject: 'Nueva solicitud de presupuesto - dmlogistics.es',
+          _template: 'table',
+          _captcha: 'false',
+          Nombre: form.nombre,
+          Empresa: form.empresa,
+          Email: form.email,
+          Telefono: form.telefono,
+          Servicio: form.servicio,
+          Mensaje: form.mensaje,
+        }),
+      })
+      const data = await res.json()
+      if (res.ok && (data.success === 'true' || data.success === true)) {
+        setSent(true)
+      } else {
+        setError('No se pudo enviar. Inténtalo de nuevo o escríbenos a info@dmlogistics.es.')
+      }
+    } catch {
+      setError('No se pudo enviar. Vuelve a intentarlo o escríbenos a info@dmlogistics.es.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -140,13 +170,16 @@ export default function ContactoPage() {
                       He leído y acepto la <a href="/politica-privacidad" target="_blank" style={{ color: '#1B2D6E', fontWeight: 600 }}>Política de Privacidad</a> y el tratamiento de mis datos para gestionar mi solicitud. *
                     </label>
                   </div>
-                  <button type="submit" style={{ width: '100%', backgroundColor: '#F0A87C', color: 'white', padding: '0.875rem', borderRadius: '0.5rem', border: 'none', fontWeight: 700, fontSize: '1rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', fontFamily: 'inherit', transition: 'background 0.2s' }}
+                  <button type="submit" disabled={sending} style={{ width: '100%', opacity: sending ? 0.7 : 1, backgroundColor: '#F0A87C', color: 'white', padding: '0.875rem', borderRadius: '0.5rem', border: 'none', fontWeight: 700, fontSize: '1rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', fontFamily: 'inherit', transition: 'background 0.2s' }}
                     onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#e08a55')}
                     onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#F0A87C')}
                   >
                     <Send size={16} />
-                    Enviar solicitud
+                    {sending ? 'Enviando…' : 'Enviar solicitud'}
                   </button>
+                  {error && (
+                    <p style={{ fontSize: '0.8rem', color: '#dc2626', textAlign: 'center', marginTop: '0.75rem' }}>{error}</p>
+                  )}
                   <p style={{ fontSize: '0.75rem', color: '#94a3b8', textAlign: 'center', marginTop: '1rem' }}>
                     Respuesta en menos de 24h. Sin compromiso.
                   </p>
