@@ -47,7 +47,7 @@ export default function SobreNosotrosPage() {
                 Desde el primer día apostamos por flota propia, certificación ATP y un modelo de relación directa con el cliente. Sin intermediarios, sin sorpresas.
               </p>
               <p style={{ color: '#475569', lineHeight: 1.8, fontSize: '0.95rem' }}>
-                Hoy operamos en Madrid y estamos expandiéndonos a Valencia y Barcelona, llevando el mismo modelo de servicio a más empresas del sector alimentario en toda España.
+                Hoy operamos en Madrid, Valencia y Barcelona, llevando el mismo modelo de servicio especializado a empresas del sector alimentario en toda España.
               </p>
             </div>
 
