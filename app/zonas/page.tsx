@@ -28,19 +28,19 @@ const zones = [
   },
   {
     city: 'Valencia',
-    status: 'Próximamente',
-    statusColor: '#f59e0b',
-    desc: 'Expansión en marcha. Pronto disponible para toda la Comunitat Valenciana. Si eres de Valencia, contáctanos ya.',
+    status: 'Operativo',
+    statusColor: '#10b981',
+    desc: 'Cobertura en Valencia y toda la Comunitat Valenciana. Servicio especializado en transporte alimentario.',
     areas: ['Valencia Capital', 'Alicante', 'Castellón', 'Elche', 'Torrent', 'Gandía', 'Sagunto', 'Toda la CV'],
-    schedule: 'Próximamente. Regístrate para ser notificado del lanzamiento.',
+    schedule: 'Servicio adaptado a tus horarios. Consúltanos frecuencias y ventanas de entrega.',
   },
   {
     city: 'Barcelona',
-    status: 'Próximamente',
-    statusColor: '#f59e0b',
-    desc: 'Expansión en marcha. Pronto disponible para toda Cataluña. Si eres de Barcelona, contáctanos ya.',
+    status: 'Operativo',
+    statusColor: '#10b981',
+    desc: 'Cobertura en Barcelona y toda Cataluña. Servicio especializado en transporte alimentario.',
     areas: ['Barcelona Capital', "L'Hospitalet", 'Badalona', 'Terrassa', 'Sabadell', 'Girona', 'Tarragona', 'Toda Cataluña'],
-    schedule: 'Próximamente. Regístrate para ser notificado del lanzamiento.',
+    schedule: 'Servicio adaptado a tus horarios. Consúltanos frecuencias y ventanas de entrega.',
   },
 ]
 
@@ -54,7 +54,7 @@ export default function ZonasPage() {
             Zonas de reparto y cobertura
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.0625rem', maxWidth: '540px', margin: '0 auto', lineHeight: 1.75 }}>
-            Actualmente operamos en Madrid y estamos expandiendo nuestra red a Valencia y Barcelona para cubrir toda España.
+            Operamos en Madrid, Valencia y Barcelona, con servicio especializado de transporte alimentario en cada zona.
           </p>
         </div>
       </section>
