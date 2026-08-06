@@ -53,7 +53,7 @@ export default function Home() {
       <section style={{ backgroundColor: '#F0A87C', padding: '1rem 0' }}>
         <div style={{ ...S.container, display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', gap: '1rem' }}>
           {[
-            { value: '+500', label: 'Envíos al mes' },
+            { value: '+1000', label: 'Envíos al mes' },
             { value: '3', label: 'Ciudades activas' },
             { value: '100%', label: 'Flota propia' },
             { value: 'ATP', label: 'Certificación oficial' },
@@ -161,13 +161,13 @@ export default function Home() {
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <div style={S.tag}>Cobertura nacional</div>
             <h2 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 800, color: '#1B2D6E', letterSpacing: '-0.02em' }}>Zonas de operación</h2>
-            <p style={{ fontSize: '1.0625rem', color: '#64748b', marginTop: '0.75rem' }}>Activos en Madrid y en plena expansión hacia Valencia y Barcelona</p>
+            <p style={{ fontSize: '1.0625rem', color: '#64748b', marginTop: '0.75rem' }}>Operamos en Madrid, Valencia y Barcelona</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
             {[
               { city: 'Madrid', status: 'Activo', color: '#10b981', desc: 'Cobertura completa en Madrid capital y comunidad. Servicio diario con múltiples frecuencias.' },
-              { city: 'Valencia', status: 'Próximamente', color: '#f59e0b', desc: 'En proceso de expansión. Pronto disponible para toda la Comunitat Valenciana.' },
-              { city: 'Barcelona', status: 'Próximamente', color: '#f59e0b', desc: 'En proceso de expansión. Pronto disponible en Barcelona y área metropolitana.' },
+              { city: 'Valencia', status: 'Activo', color: '#10b981', desc: 'Cobertura en Valencia y la Comunitat Valenciana. Servicio adaptado a tus horarios.' },
+              { city: 'Barcelona', status: 'Activo', color: '#10b981', desc: 'Cobertura en Barcelona y área metropolitana. Servicio adaptado a tus horarios.' },
             ].map(z => (
               <div key={z.city} className="zone-card" style={{ backgroundColor: 'white', borderRadius: '1rem', padding: '2rem', border: '1px solid rgba(0,0,0,0.06)', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
